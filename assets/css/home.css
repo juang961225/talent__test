@@ -1,0 +1,132 @@
+.home{
+    padding: 10px;
+}
+
+.home__title{
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+.home__input{
+    border: none;
+    background-color: rgb(202, 202, 202);
+    margin-bottom: 20px;
+    height: 30px;
+    width: 80%;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.home__input--search{
+    width: 70%;
+    border-radius: 10px 0 0 10px;
+}
+
+.home__icon{
+    background-color: rgb(202, 202, 202);
+    border: none;
+    margin-bottom: 20px;
+    height: 30px;
+    width: 10%;
+border-radius: 0 10px 10px 0;
+}
+
+.home__search{
+    display: flex;
+}
+
+.home__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.home__wrapper{
+    overflow-x: hidden;
+    height: 300px;
+    margin-bottom: 20px;
+    border: 1px solid gray ;
+    border-radius: 20px;
+}
+
+.home__form--comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px gray solid;
+    width: 100%;
+    height: 70px;
+    border-radius: 10px;
+    border-bottom: 2px solid gray;
+}
+
+.home__comment{
+    border-radius: 10px 0 0 10px;
+    border: none;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.home__button{
+    width: 32%;
+    border-radius: 100px;
+    border: none;
+    height: 25px;
+    background-color: rgba(106, 159, 211, 0.933);
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.home__text{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home__subtitle{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (min-width: 800px){
+    .home{
+        padding: 30px;
+    }
+
+    .home__title{
+        font-size: 2rem;
+    }
+
+    .home__input{
+    font-size: 1rem;
+    height: 30px;
+    width: 90%;
+    }
+
+    .home__input--date{
+        width: 13%;
+        margin-left: 20px;
+    }
+
+    .home__form{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .home__wrapper{
+        height: 400px;
+    }
+
+    .home__button{
+        width: 10%;
+    }
+
+    .home__subtitle{
+        font-size: 1.5rem;
+    }
+    .home__text{
+        font-size: ;
+    }
+
+}
