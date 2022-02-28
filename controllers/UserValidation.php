@@ -1,5 +1,5 @@
 <?php
-class RegisterValidation
+class UserValidation
 {
     public $userName = "";
     public $phone = "";
@@ -8,7 +8,15 @@ class RegisterValidation
     public $fields = array();
 
 
-    public function __construct($user,$cel,$adress,$pass)
+    /**
+     * assigns variables and calls validation methods
+     * UserValidation constructor.
+     * @param string $user
+     * @param string $cel
+     * @param string $adress
+     * @param $pass
+     */
+    public function __construct($user, $cel="", $adress="", $pass)
     {
         $this->userName = $user;
         $this->phone = $cel;
@@ -23,6 +31,9 @@ class RegisterValidation
         return $this->fields;
     }
 
+    /**
+     *performs the validations of the password field
+     */
     private function passwordValidation ()
     {
         if (isset($_POST["password"]))
@@ -32,11 +43,14 @@ class RegisterValidation
 
         if(preg_match("/^(?=\w*[A-Z])(?=\w*-)(?=\w*[a-z])\S{6,18}$/", $this->password) === 0)
         {
-            $this->printFields("the email field cannot be empty");
+            $this->printFields("This password should contain at least 6 characters long and contain a “-” and an uppercase letter");
         }
 
     }
 
+    /**
+     *performs the validations of the email field
+     */
     private function emailValidation ()
     {
 
@@ -56,6 +70,9 @@ class RegisterValidation
         }
     }
 
+    /**
+     *performs the validations of the telephone field
+     */
     private function phoneValidation()
     {
         if(isset($_POST["phone"]))
@@ -75,6 +92,9 @@ class RegisterValidation
 
     }
 
+    /**
+     *performs username validations
+     */
     private function userNameValidation()
     {
         if(preg_match("/^$/", $this->userName) === 1)
@@ -98,6 +118,10 @@ class RegisterValidation
         }
     }
 
+    /**
+     * add validation messages to the array fields
+     * @param string $content validation messages
+     */
     private function printFields ($content)
     {
         array_push($this->fields, $content);
